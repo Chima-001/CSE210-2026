@@ -18,9 +18,11 @@ class Program
         Journal journal = new Journal();
         PromptGenerator generator = new PromptGenerator();
 
+        Console.WriteLine("Welcome to the Journal Program!");
+        
         while (true)
         {
-            Console.WriteLine("\nPlease select one of the following choices:");
+            Console.WriteLine("Please select one of the following choices:");
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");

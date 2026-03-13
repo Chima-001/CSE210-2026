@@ -12,7 +12,7 @@ public class Journal
 
     public void DisplayAll()
     {
-        Console.WriteLine($"\nTotal Entries: {_entries.Count}");
+        Console.WriteLine($"Total Entries: {_entries.Count}");
         Console.WriteLine();
         foreach (Entry entry in _entries)
         {
