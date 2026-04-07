@@ -55,6 +55,8 @@ class Program
             }
         }
         Activity.SaveActivityLog();
+        Console.Write("\nThank you for using the Mindfulness Program. Goodbye!");
+        Activity.ShowEllipsis(5);
         Console.WriteLine();
     }
 }

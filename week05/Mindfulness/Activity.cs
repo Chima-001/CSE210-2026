@@ -1,7 +1,7 @@
 public class Activity
 {
-    protected string _name;
-    protected string _description;
+    private string _name;
+    private string _description;
     protected int _duration;
     protected static Dictionary<string, int> _activityLog = new();
 
@@ -102,6 +102,7 @@ public class Activity
                 writer.WriteLine($"{entry.Key}|{entry.Value}");
             }
         }
+        Console.Clear();
         Console.Write("Saving Activity Log");
         ShowEllipsis(5);
         Console.WriteLine("\nActivity Log saved.");
