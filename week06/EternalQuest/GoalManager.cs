@@ -89,6 +89,12 @@ public class GoalManager
 
         int index = int.Parse(Console.ReadLine()) - 1;
         Goal selected = _goals[index];
+
+        if (selected.IsComplete())
+        {
+            Console.WriteLine("This goal is already completed.");
+            return;
+        }
         selected.RecordEvent();
 
         int earned = int.Parse(selected.GetPoints());
@@ -104,8 +110,9 @@ public class GoalManager
             _score += earned;
             if (checklist.IsComplete())
             {
-                _score += int.Parse(selected.GetStringRepresentation().Split(",")[4]);
-                Console.WriteLine("Bonus! You completed the checklist goal!");
+                int bonus = int.Parse(selected.GetStringRepresentation().Split(",")[4]);
+                _score += bonus;
+                Console.WriteLine($"Bonus! You completed the checklist goal! +{bonus} bonus points!");
             }
             Console.WriteLine($"Congratulations! You have earned {selected.GetPoints()} points!");
         }
